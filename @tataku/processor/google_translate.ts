@@ -15,12 +15,12 @@ export async function run(
   }
 
   const gtr = new GTR();
-  const { translated } = await gtr.translate(source.join("\n"), {
+  const { trans } = await gtr.translate(source.join("\n"), {
     sourceLang: options.source,
     targetLang: options.target,
   });
 
-  return translated.split("\n");
+  return trans.split("\n");
 }
 
 type Option = {
