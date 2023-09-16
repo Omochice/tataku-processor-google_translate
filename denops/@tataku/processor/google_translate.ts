@@ -1,6 +1,6 @@
 import { Denops } from "https://deno.land/x/denops_std@v5.0.1/mod.ts";
 import { GTR } from "https://deno.land/x/gtr@v0.0.1/mod.ts";
-import { $object, $string, access } from "https://esm.sh/lizod@0.2.6/";
+import { $object, $string, access } from "https://esm.sh/lizod@0.2.7/";
 
 const isOption = $object({
   source: $string,
