@@ -1,0 +1,74 @@
+---
+name: tataku-processor-google_translate
+description: The processor module for tataku.vim
+--
+
+=pod
+
+=head1 tataku-processor-google_translate X<tataku-processor-google_translate>
+
+The processor module that translate by google-translate.
+
+=head2 Contents X<tataku-processor-google_translate-contents>
+
+=over 0
+
+=item * L<Dependencies|tataku-processor-google_translate-dependencies>
+
+=item * L<Options|tataku-processor-google_translate-options>
+
+=item * L<Samples|tataku-processor-google_translate-samples>
+
+=back
+
+=head2 Dependencies X<tataku-processor-google_translate-dependencies>
+
+This plugin needs:
+
+=over 0
+
+=item * L<denops.vim|https://github.com/vim-denops/denops.vim>
+
+=item * L<tataku.vim|https://github.com/Omochice/tataku.vim>
+
+=back
+
+=head2 Options X<tataku-processor-google_translate-options>
+
+This module has some options.
+
+=over 0
+
+=item * C<source> X<tataku-processor-google_translate-options-source>
+
+  Source language.
+  See: L<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale>
+
+=item * C<target>
+
+  Target language.
+  See: L<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale>
+
+=item * C<source> X<tataku-processor-google_translate-options-source>
+
+=back
+
+=head2 Samples X<tataku-processor-google_translate-samples>
+
+=begin vim
+
+let g:tataku_recipes = #{
+  \   sample: #{
+  \     processor: #{
+  \       name: 'google_translate',
+  \       options: #{
+  \         source: 'en',
+  \         source: 'ja',
+  \       },
+  \     }
+  \   }
+  \ }
+
+=end vim
+
+=cut
