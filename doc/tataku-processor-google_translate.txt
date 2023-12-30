@@ -33,7 +33,6 @@ This module has some options.
 
   Target language.
   See: |https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale|
-- `source` *tataku-processor-google_translate-options-source*
 
 Samples ~
                                   *tataku-processor-google_translate-samples*

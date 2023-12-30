@@ -27,7 +27,6 @@ This module has some options.
 
   Target language.
   See: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-- `source` 
 
 ## Samples 
 
