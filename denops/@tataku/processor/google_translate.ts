@@ -19,12 +19,12 @@ const processor = (_: Denops, option: unknown) => {
   const gtr = new GTR();
   return new TransformStream<string[]>({
     transform: async (chunk: string[], controller) => {
-      const { trans } = await gtr.translate(chunk.join("\n"), {
+      const { trans } = await gtr.translate(chunk.join(""), {
         sourceLang: option.source,
         targetLang: option.target,
       });
 
-      controller.enqueue(trans.split("\n"));
+      controller.enqueue(trans.split(/\r?\n/).map((e) => `${e}\n`));
     },
   });
 };
