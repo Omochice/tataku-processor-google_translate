@@ -1,4 +1,4 @@
-import { Denops } from "https://deno.land/x/denops_std@v6.5.0/mod.ts";
+import { Denops } from "https://deno.land/x/denops_std@v6.5.1/mod.ts";
 import { GTR } from "https://deno.land/x/gtr@v0.0.1/mod.ts";
 import { $object, $string, access } from "https://esm.sh/lizod@0.2.7/";
 
