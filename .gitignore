@@ -5,3 +5,6 @@ result-*
 # Ignore automatically generated direnv output
 .direnv
 
+README.md
+doc/*.txt
+
