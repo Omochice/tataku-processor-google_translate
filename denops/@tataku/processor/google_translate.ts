@@ -1,4 +1,4 @@
-import { Denops } from "jsr:@denops/std@8.1.1";
+import { Denops } from "jsr:@denops/std@8.2.0";
 import { GTR } from "https://deno.land/x/gtr@v0.0.1/mod.ts";
 import { $object, $string, access } from "npm:lizod@0.2.7";
 
