@@ -1,21 +1,20 @@
 import { Denops } from "jsr:@denops/std@8.2.0";
 import { GTR } from "https://deno.land/x/gtr@v0.0.1/mod.ts";
-import { $object, $string, access } from "npm:lizod@0.2.7";
+import { assert, is, type Predicate } from "jsr:@core/unknownutil@4.3.0";
+import type { ProcessorFactory } from "jsr:@omochice/tataku-vim@1.2.1";
 
-const isOption = $object({
-  source: $string,
-  target: $string,
-});
+type Option = {
+  source: string;
+  target: string;
+};
 
-const processor = (_: Denops, option: unknown) => {
-  const ctx = { errors: [] };
-  if (!isOption(option, ctx)) {
-    throw new Error(
-      ctx.errors
-        .map((e) => `error at ${e} ${access(option, e)}`)
-        .join("\n"),
-    );
-  }
+const isOption = is.ObjectOf({
+  source: is.String,
+  target: is.String,
+}) satisfies Predicate<Option>;
+
+const processor: ProcessorFactory = (_: Denops, option: unknown) => {
+  assert(option, isOption);
   const gtr = new GTR();
   return new TransformStream<string[]>({
     transform: async (chunk: string[], controller) => {
