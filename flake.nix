@@ -92,7 +92,7 @@
           check-actions = pkgs.lib.pipe ''
             actionlint
             ghalint run
-            zizmor .github/workflows
+            zizmor .github
           '' [ (runAs "check-actions" devPackages.actions) ];
           check-renovate-config = pkgs.lib.pipe ''
             renovate-config-validator renovate.json5
